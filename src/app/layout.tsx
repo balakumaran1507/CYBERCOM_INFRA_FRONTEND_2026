@@ -23,9 +23,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cybercom CTF Infra - Premier Capture The Flag Competition",
+  title: "Cybercom CTF Infra",
   description: "Join the premier Capture The Flag competition. Solve challenges in Web, Crypto, Forensics, Pwn, Reverse, and more. Compete with the best and prove your cybersecurity skills.",
   keywords: ["CTF", "Capture The Flag", "Cybersecurity", "Hacking", "Security"],
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({

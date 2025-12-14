@@ -109,7 +109,7 @@ class APIClient {
     // Challenge endpoints
     async getChallenges(): Promise<APIResponse<Challenge[]>> {
         const response = await this.request<Challenge[]>('/api/v1/challenges');
-        if (!response.success && process.env.NODE_ENV === 'development') {
+        if (!response.success) {
             console.log('Using mock challenges data');
             return {
                 success: true,
@@ -133,7 +133,7 @@ class APIClient {
     // Scoreboard endpoints
     async getScoreboard(): Promise<APIResponse<ScoreboardEntry[]>> {
         const response = await this.request<ScoreboardEntry[]>('/api/v1/scoreboard');
-        if (!response.success && process.env.NODE_ENV === 'development') {
+        if (!response.success) {
             console.log('Using mock scoreboard data');
             return {
                 success: true,
