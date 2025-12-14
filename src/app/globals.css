@@ -186,6 +186,16 @@ button {
   background-size: 24px 24px;
 }
 
+@keyframes grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 60px;
+  }
+}
+
 .mask-radial-gradient {
   mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
@@ -193,4 +203,15 @@ button {
 
 .cyber-shape-stroke {
   vector-effect: non-scaling-stroke;
+}
+
+/* === Autofill Override === */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: var(--color-foreground) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: var(--color-foreground);
 }
